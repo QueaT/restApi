@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const a = async () => {
+        const ge = await axios.post("http://localhost:3000/orders/", {
+          name: 'kubddwa123',
+          price: '12',
+          count: '3'
+        });
+        console.log(ge,'ok')
+        const getData = await axios.get("http://localhost:3000/orders/")
+        console.log(getData);
+      };
+      a();
+    </script>
+  </body>
+</html>
